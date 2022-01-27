@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Apple watch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<script src="jQuery.js"></script>
+<script src="animation.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+#backguardImg {
+   height:600px;
+   width:auto;
+}
+#part1, #part2 {
+   position:absolute;
+   box-shadow:0px 0px 10px 5px rgba(0,0,0,0.2);
+}
+#part1 {
+   width:2.5px;
+   background:white;
+   height:10px;
+   margin-top:-8px;
+}
+#part2 {
+   width:8px;
+   border:1px solid white;
+   background:white;
+   border-radius:100px;
+}
+#hrDiv #part2 {
+   height:47px;
+   margin-top:calc(-20px + -16px);
+}
+#minDiv  #part2 {
+   height:89px;
+   margin-top:calc(-20px + -37px);
+}
+#secDiv #part1 {
+   height:128px;
+   width:2px;
+   background:hsl(0,90%,55%);
+   margin-top:-46px;
+   border-radius:100px;
+}
+#secDiv {
+   z-index:101;
+}
+
+</style>
+<body onload="loaded()">
+  <h1 id="heading" ><i class="fa fa-apple"></i> Apple Watch<br><span>Face 2</span></h1>
+  <img id="backguardImg" src="face/face2.png" >
+  <div id="clockdiv" >
+  
+ 	<div id="hrDiv" >
+  	  <div id="part1" ></div>
+  	  <div id="part2" ></div>
+	</div>
+	<div id="minDiv" >
+	  <div id="part1" ></div>
+	  <div id="part2" ></div>
+	</div>
+	<div id="secDiv" >
+	  <div id="part1" ></div>
+	</div>
+  </div>
+
+<p id="next">Next</p>
+<p id="previous">Prev</p>
+
+<script type="text/javascript">
+  $("#next").click(function(){openPage("face3.html");});
+</script>
+</body>
+</html>

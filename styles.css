@@ -1,0 +1,83 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family:sans-serif;
+}
+body {
+   min-height:100vh;
+   background:hsl(0,0%,98%);
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   opacity:0;
+   transition:0.3s opacity;
+}
+html {
+   background:white;
+}
+#heading {
+   position:fixed;
+   top:40px;
+   text-align:center;
+}
+span {
+    font-size:0.6em;
+}
+#next, #previous {
+  position:fixed;
+  bottom:20px;
+  font-weight:600;
+  color:dodgerblue;
+  font-size:1em;
+  padding:10px 17px;
+  border-radius:3px;
+}
+#previous {
+   display:none;
+}
+
+#next:active, #previous:active  {
+   opacity:0.8;
+}
+#next {
+    right:20px;
+    cursor: pointer;
+}
+#previous {
+    left:20px;
+}
+#hrDiv, #minDiv, #secDiv {
+   position:absolute;
+   height:250px;
+   width:15px;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+#clockdiv{
+   position:absolute;
+   height:600px;
+   width:322px;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+#clockdiv:before{
+   content:"";
+   height:3px;
+   width:3px;
+   background:black;
+   position:absolute;
+   border-radius:50%;
+   border:1.5px solid red;
+   z-index:102;
+}
+#clockdiv:after{
+   content:"";
+   height:9px;
+   width:9px;
+   background:white;
+   position:absolute;
+   border-radius:50%;
+}
